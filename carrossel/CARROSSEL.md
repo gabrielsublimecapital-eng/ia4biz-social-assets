@@ -6,7 +6,7 @@
 ## Regra de ouro
 
 **Foto real em tela cheia da PESSOA da notícia (ou da marca), zero cara de template.**
-2 notícias por carrossel, no máximo 3. Cada slide = 1 notícia completa.
+**1 notícia = 1 post separado**, cada um com legenda própria explicando a notícia (contexto → detalhes → por que importa → segue @ia4bizz). Post solo NÃO leva índice `01/03` nem `ARRASTA →`. Carrossel só quando UMA notícia pede desdobramento em mais slides.
 
 ## Anatomia do slide (1080×1350 · 4:5)
 
