@@ -1,0 +1,73 @@
+/* IA4Biz — carrossel v3 "editorial cream" · anatomia tipo playbook (capa + teste + jogadas + CTA)
+   Tokens da landing sobre paper. Render 1080×1350. */
+
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('../../../template/fonts/InstrumentSans.ttf') format('truetype');
+  font-weight: 100 900;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('../../../template/fonts/IBMPlexMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+:root {
+  --ink: #1A1611;
+  --paper: #EDE7DA;
+  --paper-card: #F7F3E9;
+  --panel: #201A14;
+  --azul: #E8551E;     /* accent principal (laranja, esquema da referência) */
+  --ferrugem: #E8551E;
+  --menta: #F5A25C;    /* accent claro sobre painel escuro */
+  --cinza: #8A857A;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1350px; }
+body { font-family: 'Instrument Sans', sans-serif; background: var(--paper); color: var(--ink); -webkit-font-smoothing: antialiased; }
+
+.slide { position: relative; width: 1080px; height: 1350px; overflow: hidden; background: var(--paper); padding: 64px 72px 60px; display: flex; flex-direction: column; }
+
+/* cantoneiras */
+.slide::before, .slide::after { content: ''; position: absolute; width: 46px; height: 46px; border: 5px solid var(--ferrugem); }
+.slide::before { top: 40px; left: 40px; border-right: 0; border-bottom: 0; }
+.slide::after { top: 40px; right: 40px; border-left: 0; border-bottom: 0; }
+.cb { position: absolute; width: 46px; height: 46px; border: 5px solid var(--ferrugem); bottom: 40px; }
+.cb.l { left: 40px; border-right: 0; border-top: 0; }
+.cb.r { right: 40px; border-left: 0; border-top: 0; }
+
+/* header */
+.topo { display: flex; justify-content: space-between; align-items: center; font-family: 'IBM Plex Mono', monospace; font-size: 24px; letter-spacing: .18em; margin-bottom: 66px; }
+.kicker { color: var(--ferrugem); text-transform: uppercase; }
+.kicker .tra { margin-right: 14px; }
+.indice { color: var(--cinza); }
+
+/* bloco de título */
+.leadin { font-size: 34px; color: var(--cinza); margin-bottom: 10px; font-weight: 500; }
+h1 { font-size: 74px; line-height: 1.06; font-weight: 800; letter-spacing: -0.015em; }
+h1 .az { color: var(--azul); }
+.sub { font-size: 34px; color: #4A463D; margin-top: 22px; font-weight: 500; }
+
+/* card de bullets */
+.miolo { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.card { background: var(--paper-card); border: 1px solid rgba(7,17,15,.08); border-radius: 26px; padding: 58px 54px; box-shadow: 0 3px 0 rgba(7,17,15,.05); }
+.card ul { list-style: none; }
+.card li { display: flex; gap: 22px; font-size: 31px; line-height: 1.35; font-weight: 500; }
+.card li + li { margin-top: 34px; }
+.card li .seta { color: var(--ferrugem); font-weight: 800; flex: none; }
+
+/* teaser serif */
+.teaser { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-size: 34px; color: #3E5248; margin-top: auto; padding-bottom: 74px; }
+.teaser .seta { color: var(--ferrugem); font-style: normal; font-family: 'Instrument Sans', sans-serif; font-weight: 700; }
+
+/* rodapé */
+.rodape { position: absolute; left: 72px; right: 72px; bottom: 52px; display: flex; justify-content: space-between; align-items: center; font-family: 'IBM Plex Mono', monospace; font-size: 24px; letter-spacing: .14em; color: var(--cinza); }
+.rodape .marca { display: flex; align-items: center; gap: 12px; }
+.rodape .chev { color: var(--ferrugem); font-family: 'Instrument Sans', sans-serif; font-weight: 800; font-size: 30px; }
+.rodape .nome { font-family: 'Instrument Sans', sans-serif; font-weight: 700; color: var(--ink); font-size: 27px; letter-spacing: 0; }
+.rodape .arroba { margin-left: 6px; }
+.rodape .dir { color: var(--ferrugem); text-transform: uppercase; }
+
+/* painel escuro (hero/CTA) */
+.painel { background: var(--panel); border-radius: 26px; padding: 48px 54px; color: var(--paper); }
